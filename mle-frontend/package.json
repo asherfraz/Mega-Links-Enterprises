@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/berkshire-swash": "^5.2.5",
+    "@fontsource/rubik-doodle-shadow": "^5.2.5",
+    "@fontsource/rubik-scribble": "^5.2.5",
     "@tailwindcss/vite": "^4.1.4",
     "framer-motion": "^12.7.4",
     "react": "^19.0.0",

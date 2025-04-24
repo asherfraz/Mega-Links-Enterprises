@@ -1,0 +1,33 @@
+.animated-border {
+    --highlight: 255 255 255;
+
+    background:
+        linear-gradient(rgb(var(--background)), rgb(var(--background))) padding-box,
+        linear-gradient(145deg,
+            rgb(var(--highlight)) 0%,
+            rgb(var(--highlight) / 0.3) 33.33%,
+            rgb(var(--highlight) / 0.8) 50.5%,
+            rgb(var(--highlight) / 0.14) 66.67%,
+            rgb(var(--highlight) / 0.1) 100%) border-box;
+    border: 2px solid transparent;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    animation: borderShift 6s linear infinite;
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+}
+
+@keyframes borderShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

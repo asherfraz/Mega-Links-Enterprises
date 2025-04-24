@@ -2,12 +2,13 @@ import React from "react";
 import { createBrowserRouter } from "react-router";
 import Home from "./page/Home";
 import Layout from "./Layout";
+import NotFound from "./page/NotFound";
 
 const router = createBrowserRouter([
 	{
 		// Error page
 		path: "*",
-		element: <Home />,
+		element: <NotFound />,
 	},
 	{
 		path: "/",
@@ -16,6 +17,18 @@ const router = createBrowserRouter([
 	{
 		path: "/about",
 		element: <Layout>About</Layout>,
+		children: [
+			// portfolio component
+			{
+				path: "portfolio",
+				element: <Layout>Portfolio</Layout>,
+			},
+			// Our Team Component
+			{
+				path: "our-team",
+				element: <Layout>Our Team</Layout>,
+			},
+		],
 	},
 	{
 		path: "/services",

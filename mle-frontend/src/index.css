@@ -4,3 +4,8 @@
 * {
     @apply transition-colors duration-400;
 }
+
+
+rubik-scribble {
+    font-family: 'rubik-scribble', sans-serif;
+}

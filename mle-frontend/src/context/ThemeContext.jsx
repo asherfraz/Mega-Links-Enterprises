@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-	const [theme, setTheme] = useState("");
+	const [theme, setTheme] = useState("dark");
 
 	// Check for saved theme in localStorage and system preference on initial load
 	useEffect(() => {
@@ -22,7 +22,7 @@ export function ThemeProvider({ children }) {
 
 	const toggleTheme = () => {
 		setTheme((prev) => (prev === "light" ? "dark" : "light"));
-		console.log("Theme toggled to:", theme);
+		// console.log("Theme toggled to:", theme);
 	};
 
 	return (

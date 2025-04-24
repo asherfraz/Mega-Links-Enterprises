@@ -1,1 +1,6 @@
-TODO: add GSAP Animation
+TODO: Fix Footer.
+---
+
+TODO: make SErvices Section.
+TODO: make Why Choose Us.
+TODO: make Text Animation using ScrollTrigger scrub and pin properties on the Home Page.
