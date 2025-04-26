@@ -55,7 +55,7 @@ const AboutAccordion = ({ setImgIndex }) => {
 							transition={{ duration: 0.5, delay: 0.15 }}
 							className={`
                                 ${activeIndex === index ? "" : "hidden"} 
-                            mb-2 accordion-content px-2 pb-2 text-left text-gray-700 dark:text-black/95 bg-gray-100 dark:bg-gray-300 rounded-b-lg overflow-y-hidden `}
+                            mb-2 accordion-content px-2 pb-2 text-left text-gray-700 dark:text-black/95 bg-gray-100 dark:bg-gray-300 rounded-b-lg overflow-hidden `}
 						>
 							<p>{accordion_content[index]}</p>
 						</motion.div>

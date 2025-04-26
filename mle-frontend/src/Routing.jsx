@@ -3,6 +3,10 @@ import { createBrowserRouter } from "react-router";
 import Home from "./page/Home";
 import Layout from "./Layout";
 import NotFound from "./page/NotFound";
+import About from "./page/About";
+import ProjectRequirement from "./page/ProjectRequirement";
+import Services from "./page/Services";
+import Contact from "./page/Contact";
 
 const router = createBrowserRouter([
 	{
@@ -16,7 +20,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/about",
-		element: <Layout>About</Layout>,
+		element: <About />,
 		children: [
 			// portfolio component
 			{
@@ -31,12 +35,16 @@ const router = createBrowserRouter([
 		],
 	},
 	{
+		path: "/project-requirement",
+		element: <ProjectRequirement />,
+	},
+	{
 		path: "/services",
-		element: <Layout>Services</Layout>,
+		element: <Services />,
 	},
 	{
 		path: "/contact",
-		element: <Layout>Contact</Layout>,
+		element: <Contact />,
 	},
 ]);
 
