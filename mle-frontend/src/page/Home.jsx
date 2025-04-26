@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../Layout";
 import Hero from "../components/Hero";
 import FloatingText from "../components/FloatingText";
-import AboutAcordian from "../components/AboutAcordian";
+import AboutSectionHome from "../components/AboutSectionHome";
 import CompaniesGrid from "../components/CompaniesGrid";
 import ServicesSection from "../components/ServicesSection";
 import TestimonialsSection from "../components/TestimonialsSection";
@@ -17,7 +17,7 @@ const Home = () => {
 			<Hero />
 
 			<RevealComponent >
-				<AboutAcordian />
+				<AboutSectionHome />
 			</RevealComponent>
 
 			<RevealComponent >

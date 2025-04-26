@@ -10,7 +10,8 @@ export default defineConfig({
     host: true, // This is important
     port: 5173,
     allowedHosts: [
-      "8bb8-39-33-235-100.ngrok-free.app", // 👈 Add this ngrok domain here
+      "quiet-bluegill-normal.ngrok-free.app", // Add this ngrok domain here
+      // ngrok http --url=quiet-bluegill-normal.ngrok-free.app 5173
     ],
   },
 })

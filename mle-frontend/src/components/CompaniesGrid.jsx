@@ -1,5 +1,6 @@
 import React from 'react'
 import ntc_logo from '../assets/Companies/ntc.jpg'
+import statelife_logo from '../assets/Companies/statelife.jpg'
 
 const CompaniesGrid = () => {
     return (<>
@@ -31,7 +32,7 @@ const CompaniesGrid = () => {
                 <img
                     alt="State Life Logo"
                     className="h-20  mx-auto rounded-lg object-center "
-                    src="https://scontent.fisb5-1.fna.fbcdn.net/v/t39.30808-1/347811364_650994456849727_7489633463661441312_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=eEAJhCDakkIQ7kNvwHo5lZu&_nc_oc=AdkE9meqlpGYlgjyKuxGUzjGGQARlAKFZLWPctr9Tut459QbJEiUKzzXvwuf69jAJXI&_nc_zt=24&_nc_ht=scontent.fisb5-1.fna&_nc_gid=spEhG4s4KwxRoMjeSl-pAA&oh=00_AfGvQIOslgPswjMOFBsgQRU6CwvOhDaBSik-sQ_ONrTIig&oe=680B283D"
+                    src={statelife_logo}
                 />
 
                 <img

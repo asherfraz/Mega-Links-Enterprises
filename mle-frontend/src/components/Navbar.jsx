@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router";
 import "./styles/Navbar.css";
 import { useTheme } from "../context/ThemeContext";
-import '@fontsource/berkshire-swash';
+import "@fontsource/berkshire-swash";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 const Navbar = () => {
 	const { theme, toggleTheme } = useTheme();
 	const [checked, setChecked] = useState(false);
-	const [hidden, setHidden] = useState(false)
-	const [isMobile, setIsMobile] = useState(false)
+	const [hidden, setHidden] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
 		if (theme === "dark") {
@@ -26,21 +26,22 @@ const Navbar = () => {
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		const previous = scrollY.getPrevious();
 
-		(latest > previous && latest > 150) ? setHidden(true) : setHidden(false);
+		latest > previous && latest > 150 ? setHidden(true) : setHidden(false);
 		// console.log("scrollY: ", latest, " , Previous: ", previous);
 	});
-
 
 	return (
 		<motion.header
 			variants={{
 				visible: { opacity: 1, y: 0 },
-				hidden: { opacity: 0, y: -100 }
+				hidden: { opacity: 0, y: -100 },
 			}}
 			initial="visible"
 			animate={hidden ? "hidden" : "visible"}
 			transition={{ duration: 0.5, ease: "easeInOut" }}
-			className={` ${hidden ? "relative" : "sticky"} top-0 w-full z-50 backdrop-blur-md bg-white/30 border-b border-white/20
+			className={` ${
+				hidden ? "" : "sticky"
+			} top-0 w-full z-50 backdrop-blur-md bg-white/30 border-b border-white/20
 				text-gray-600 dark:bg-gray-900 body-font transition-all duration-200  
 				shadow-[inset_0_-1px_0_0_#d1d5db] dark:shadow-[inset_0_-1px_0_0_#96969640]`}
 		>
@@ -69,7 +70,8 @@ const Navbar = () => {
 					<NavLink
 						to="/"
 						className={({ isActive }) =>
-							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+								isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
 							} `
 						}
 					>
@@ -78,7 +80,8 @@ const Navbar = () => {
 					<NavLink
 						to="/about"
 						className={({ isActive }) =>
-							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+								isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
 							} `
 						}
 					>
@@ -87,7 +90,8 @@ const Navbar = () => {
 					<NavLink
 						to="/services"
 						className={({ isActive }) =>
-							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+								isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
 							} `
 						}
 					>
@@ -96,7 +100,8 @@ const Navbar = () => {
 					<NavLink
 						to="/contact"
 						className={({ isActive }) =>
-							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+							`mr-5 dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+								isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
 							} `
 						}
 					>
@@ -131,27 +136,39 @@ const Navbar = () => {
 					</label>
 				</div>
 
-
-
-
 				<div className="md:hidden flex items-center">
 					{/* Mobile Menu Button */}
 
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 w-8 h-8 text-gray-900 dark:text-white cursor-pointer" onClick={() => setIsMobile(true)}>
-						<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="size-8 w-8 h-8 text-gray-900 dark:text-white cursor-pointer"
+						onClick={() => setIsMobile(true)}
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+						/>
 					</svg>
 
 					{/* Mobile Menu Drawer */}
 					<div
-						className={`fixed inset-0 h-screen bg-black/50 z-40 ${isMobile ? "block" : "hidden"}`}
+						className={`fixed inset-0 h-screen bg-black/50 z-40 ${
+							isMobile ? "block" : "hidden"
+						}`}
 						onClick={() => setIsMobile(false)}
 					></div>
 					<motion.div
 						initial={{ x: "100%" }}
 						animate={{ x: isMobile ? "0%" : "100%" }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
-						className={`fixed top-0 right-0 h-screen w-64 bg-white dark:bg-gray-800 shadow-lg z-50 p-4 flex flex-col ${isMobile ? "block" : "hidden"
-							}`}
+						className={`fixed top-0 right-0 h-screen w-64 bg-white dark:bg-gray-800 shadow-lg z-50 p-4 flex flex-col ${
+							isMobile ? "block" : "hidden"
+						}`}
 					>
 						<button
 							className="self-end text-gray-900 dark:text-white mb-4"
@@ -175,7 +192,10 @@ const Navbar = () => {
 						<NavLink
 							to="/"
 							className={({ isActive }) =>
-								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+									isActive
+										? "dark:text-white font-bold"
+										: "dark:text-amber-300 "
 								} `
 							}
 						>
@@ -185,7 +205,10 @@ const Navbar = () => {
 						<NavLink
 							to="/about"
 							className={({ isActive }) =>
-								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+									isActive
+										? "dark:text-white font-bold"
+										: "dark:text-amber-300 "
 								} `
 							}
 						>
@@ -195,7 +218,10 @@ const Navbar = () => {
 						<NavLink
 							to="/services"
 							className={({ isActive }) =>
-								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+									isActive
+										? "dark:text-white font-bold"
+										: "dark:text-amber-300 "
 								} `
 							}
 						>
@@ -205,7 +231,10 @@ const Navbar = () => {
 						<NavLink
 							to="/contact"
 							className={({ isActive }) =>
-								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${isActive ? "dark:text-white font-bold" : "dark:text-amber-300 "
+								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+									isActive
+										? "dark:text-white font-bold"
+										: "dark:text-amber-300 "
 								} `
 							}
 						>
@@ -244,11 +273,9 @@ const Navbar = () => {
 							</label>
 						</div>
 					</motion.div>
-
 				</div>
-
 			</div>
-		</motion.header >
+		</motion.header>
 	);
 };
 
