@@ -5,7 +5,6 @@ import FloatingText from "../components/FloatingText";
 import AboutSectionHome from "../components/AboutSectionHome";
 import CompaniesGrid from "../components/CompaniesGrid";
 import ServicesSection from "../components/ServicesSection";
-import TestimonialsSection from "../components/TestimonialsSection";
 import FaqSection from "../components/FaqSection";
 import RevealComponent from "../components/RevealComponent";
 import CTALeftAligned from "../components/CTA/CTALeftAligned";
@@ -31,12 +30,7 @@ const Home = () => {
 				<FloatingText />
 			</RevealComponent>
 
-			<RevealComponent>
-				<TestimonialsSection />
-			</RevealComponent>
-
 			<FaqSection />
-
 			<CTALeftAligned />
 		</Layout>
 	);
