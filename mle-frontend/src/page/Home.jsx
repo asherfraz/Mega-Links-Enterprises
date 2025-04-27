@@ -8,7 +8,6 @@ import ServicesSection from "../components/ServicesSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import FaqSection from "../components/FaqSection";
 import RevealComponent from "../components/RevealComponent";
-import CTACentered from "../components/CTA/CTACentered";
 import CTALeftAligned from "../components/CTA/CTALeftAligned";
 
 const Home = () => {
@@ -36,9 +35,7 @@ const Home = () => {
 				<TestimonialsSection />
 			</RevealComponent>
 
-			<RevealComponent>
-				<FaqSection />
-			</RevealComponent>
+			<FaqSection />
 
 			<CTALeftAligned />
 		</Layout>

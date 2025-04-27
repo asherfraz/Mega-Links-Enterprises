@@ -25,10 +25,10 @@ const Footer = () => {
 						</div>
 					</Link>
 					<p className="lg:w-[400px]  mt-3 text-sm  text-gray-600  dark:text-gray-500 leading-relaxed ">
-						Mega Links Enterprises is a leading engineering solutions provider in Pakistan,
-						offering comprehensive contracting and supply services since 2010.
+						Mega Links Enterprises is a leading engineering solutions provider
+						in Pakistan, offering comprehensive contracting and supply services
+						since 2010.
 						{/* We specialize in delivering quality, efficiency, and innovation across diverse industrial sectors. */}
-
 					</p>
 				</div>
 				<div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left lg:justify-end text-center ">
@@ -55,10 +55,10 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									to={"/about/porfolio"}
+									to={"/project-requirement"}
 									className="text-gray-600 hover:text-gray-800 dark:hover:text-white dark:text-gray-500"
 								>
-									Portfolio
+									Project Requirement
 								</Link>
 							</li>
 							<li>
@@ -81,107 +81,37 @@ const Footer = () => {
 					</div>
 					<div className="lg:w-1/4 md:w-1/2 w-full px-4 ">
 						<h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3">
-							Categories
+							Company
 						</h2>
 						<nav className="list-none mb-10">
 							<li>
 								<Link
-									to={"/"}
+									to={"/terms-and-conditions"}
 									className="text-gray-600 hover:text-gray-800 dark:hover:text-white dark:text-gray-500"
 								>
-									Home
+									Terms & Conditions
 								</Link>
 							</li>
 							<li>
 								<Link
-									to={"/about"}
+									to={"/privacy-policy"}
 									className="text-gray-600 hover:text-gray-800 dark:hover:text-white dark:text-gray-500"
 								>
-									About Us
+									Privacy Policy
 								</Link>
 							</li>
 							<li>
 								<Link
-									to={"/about/porfolio"}
+									to={"/faq"}
 									className="text-gray-600 hover:text-gray-800 dark:hover:text-white dark:text-gray-500"
 								>
-									Portfolio
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/services"}
-									className="text-gray-600 hover:text-gray-800 dark:hover:text-white dark:text-gray-500"
-								>
-									Services
-								</Link>
-							</li>
-							<li>
-								<Link
-									to={"/contact"}
-									className="text-gray-600 hover:text-gray-800 dark:hover:text-white dark:text-gray-500"
-								>
-									Contact Us
+									FAQ
 								</Link>
 							</li>
 						</nav>
 					</div>
 					{/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
 						<h2 className="title-font font-medium text-gray-900 dark:text-white tracking-widest text-sm mb-3">
-							CATEGORIES
-						</h2>
-						<nav className="list-none mb-10">
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									First Link
-								</a>
-							</li>
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									Second Link
-								</a>
-							</li>
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									Third Link
-								</a>
-							</li>
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									Fourth Link
-								</a>
-							</li>
-						</nav>
-					</div> */}
-					{/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-						<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-							CATEGORIES
-						</h2>
-						<nav className="list-none mb-10">
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									First Link
-								</a>
-							</li>
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									Second Link
-								</a>
-							</li>
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									Third Link
-								</a>
-							</li>
-							<li>
-								<a href className="text-gray-600 hover:text-gray-800">
-									Fourth Link
-								</a>
-							</li>
-						</nav>
-					</div>
-					<div className="lg:w-1/4 md:w-1/2 w-full px-4">
-						<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
 							CATEGORIES
 						</h2>
 						<nav className="list-none mb-10">
@@ -297,7 +227,7 @@ const Footer = () => {
 					</span>
 				</div>
 			</div>
-		</footer >
+		</footer>
 	);
 };
 

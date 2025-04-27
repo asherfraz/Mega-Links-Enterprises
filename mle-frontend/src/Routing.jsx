@@ -46,6 +46,19 @@ const router = createBrowserRouter([
 		path: "/contact",
 		element: <Contact />,
 	},
+	// Other Company Legal links
+	{
+		path: "/terms-and-conditions",
+		element: <NotFound />,
+	},
+	{
+		path: "/privacy-policy",
+		element: <NotFound />,
+	},
+	{
+		path: "/faq",
+		element: <NotFound />,
+	},
 ]);
 
 export default router;
