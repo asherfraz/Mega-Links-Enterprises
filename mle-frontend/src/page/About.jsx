@@ -8,10 +8,13 @@ import CompaniesGrid from "../components/CompaniesGrid";
 import ServicesSection from "../components/ServicesSection";
 import CTACentered from "../components/CTA/CTACentered";
 import CTALeftAligned from "../components/CTA/CTALeftAligned";
+import PageBreadcrumb from "../components/PageBreadcrumb";
 
 const About = () => {
 	return (
 		<Layout>
+			<PageBreadcrumb pageName={"About Us"} pageTitle={"Our Company"} />
+
 			<Hero />
 
 			<RevealComponent>
