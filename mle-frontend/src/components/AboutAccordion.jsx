@@ -26,7 +26,7 @@ const AboutAccordion = ({ setImgIndex }) => {
 		<>
 			{accordion_title.map((title, index) => {
 				return (
-					<div className="accordion-item  bg-white/80  rounded-lg ">
+					<div key={index} className="accordion-item  bg-white/80  rounded-lg ">
 						<div
 							className="accordion-header p-2 cursor-pointer flex justify-between items-center dark:bg-gray-800  shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out text-black dark:text-white rounded-t-lg z-52"
 							onClick={() => {
