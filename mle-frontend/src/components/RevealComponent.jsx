@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const RevealComponent = ({ children, width = "full" }) => {
+const RevealComponent = ({ children, width = "full", noPadding = false }) => {
 	const ref = useRef(null);
 
 	const isInView = useInView(ref, { once: true });
@@ -27,9 +27,15 @@ const RevealComponent = ({ children, width = "full" }) => {
 				transition={{ duration: 2, delay: 0.25, ease: "easeInOut" }}
 			>
 				<section className="min-h-fit flex items-center justify-center m-4 rounded-lg shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
-					<div className="bg-white dark:bg-gray-900 w-full px-12 py-16 rounded-lg overflow-x-hidden">
-						{children}
-					</div>
+					{noPadding ? (
+						<div className="bg-white dark:bg-gray-900 w-full rounded-lg overflow-x-hidden">
+							{children}
+						</div>
+					) : (
+						<div className="bg-white dark:bg-gray-900 w-full px-12 py-16 rounded-lg overflow-x-hidden">
+							{children}
+						</div>
+					)}
 				</section>
 			</motion.div>
 		</section>
