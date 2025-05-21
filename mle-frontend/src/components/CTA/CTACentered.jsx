@@ -1,11 +1,11 @@
-import React from "react";
+import { Link } from "react-router";
 import RevealComponent from "../RevealComponent";
 import { motion } from "framer-motion";
 
-const CTACentered = () => {
+const CTACentered = ({ link }) => {
 	return (
 		<RevealComponent>
-			<div className="flex flex-col items-center justify-center h-full ">
+			<div className="flex flex-col items-center justify-center h-full overflow-hidden ">
 				<h3 className="text-lg font-bold font-[monospace] mb-1">
 					Join Us Today...
 				</h3>
@@ -27,9 +27,12 @@ const CTACentered = () => {
 					transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
 					className="flex justify-center gap-4"
 				>
-					<button className="inline-flex text-white bg-blue-600 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded-lg text-lg hover:bg-blue-800 transition duration-100 focus:outline-none">
+					<Link
+						to={link}
+						className="inline-flex text-white bg-blue-600 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded-lg text-lg hover:bg-blue-800 transition duration-100 focus:outline-none"
+					>
 						Get Started
-					</button>
+					</Link>
 				</motion.div>
 			</div>
 		</RevealComponent>

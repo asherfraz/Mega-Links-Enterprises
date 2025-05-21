@@ -1,7 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const RevealComponent = ({ children, width = "full", noPadding = false }) => {
+const RevealComponent = ({
+	children,
+	width = "full",
+	noPadding = false,
+	card = false,
+}) => {
 	const ref = useRef(null);
 
 	const isInView = useInView(ref, { once: true });
@@ -26,7 +31,11 @@ const RevealComponent = ({ children, width = "full", noPadding = false }) => {
 				animate={mainControls}
 				transition={{ duration: 1, delay: 0.25, ease: "easeInOut" }}
 			>
-				<section className="min-h-fit flex items-center justify-center m-4 rounded-lg shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
+				<section
+					className={`min-h-fit flex items-center justify-center ${
+						card ? "m-0" : "m-4 shadow-lg"
+					} rounded-lg  bg-white dark:bg-gray-800 dark:border-gray-700`}
+				>
 					{noPadding ? (
 						<div className="bg-white dark:bg-gray-900 w-full rounded-lg overflow-x-hidden">
 							{children}

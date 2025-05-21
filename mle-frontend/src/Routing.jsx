@@ -7,6 +7,7 @@ import About from "./page/About";
 import ProjectRequirement from "./page/ProjectRequirement";
 import Services from "./page/Services";
 import Contact from "./page/Contact";
+import OurTeam from "./components/AboutPage/OurTeam";
 
 const router = createBrowserRouter([
 	{
@@ -21,18 +22,6 @@ const router = createBrowserRouter([
 	{
 		path: "/about",
 		element: <About />,
-		children: [
-			// portfolio component
-			{
-				path: "portfolio",
-				element: <Layout>Portfolio</Layout>,
-			},
-			// Our Team Component
-			{
-				path: "our-team",
-				element: <Layout>Our Team</Layout>,
-			},
-		],
 	},
 	{
 		path: "/project-requirement",
