@@ -54,6 +54,7 @@ import {
 } from "framer-motion";
 import "./styles/AnimatedOutlinedBlock.css";
 import "@fontsource/rubik-scribble";
+import { Link } from "react-router";
 
 const Hero = () => {
 	const mouseX = useMotionValue(0);
@@ -228,12 +229,18 @@ const Hero = () => {
 									transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
 									className="flex justify-center gap-4"
 								>
-									<button className="inline-flex text-white bg-blue-500 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded text-lg hover:bg-blue-800 transition">
-										Our Values
-									</button>
-									<button className="inline-flex text-gray-700 bg-gray-200 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded text-lg hover:bg-gray-600 hover:text-white transition">
-										Our Services
-									</button>
+									<Link
+										to="contact"
+										className="inline-flex text-white bg-blue-500 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded text-lg hover:bg-blue-800 transition"
+									>
+										Get Started
+									</Link>
+									<Link
+										to="project-requirement"
+										className="inline-flex text-gray-700 bg-gray-200 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded text-lg hover:bg-gray-600 hover:text-white transition"
+									>
+										Book Project
+									</Link>
 								</motion.div>
 							</motion.div>
 						</div>

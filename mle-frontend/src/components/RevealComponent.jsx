@@ -24,7 +24,7 @@ const RevealComponent = ({ children, width = "full", noPadding = false }) => {
 				}}
 				initial="hidden"
 				animate={mainControls}
-				transition={{ duration: 2, delay: 0.25, ease: "easeInOut" }}
+				transition={{ duration: 1, delay: 0.25, ease: "easeInOut" }}
 			>
 				<section className="min-h-fit flex items-center justify-center m-4 rounded-lg shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
 					{noPadding ? (

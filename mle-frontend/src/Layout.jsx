@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 			<div className="min-w-full min-h-screen flex flex-col bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
 				<ScrollToTop />
 				<Navbar />
-				<main className=" dark:bg-gray-800">{children}</main>
+				<main className="  dark:bg-gray-800">{children}</main>
 				<Footer />
 			</div>
 		</ReactLenis>
