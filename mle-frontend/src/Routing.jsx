@@ -1,13 +1,14 @@
-import React from "react";
 import { createBrowserRouter } from "react-router";
 import Home from "./page/Home";
-import Layout from "./Layout";
 import NotFound from "./page/NotFound";
 import About from "./page/About";
 import ProjectRequirement from "./page/ProjectRequirement";
 import Services from "./page/Services";
 import Contact from "./page/Contact";
-import OurTeam from "./components/AboutPage/OurTeam";
+import FaqSection from "./components/FaqSection";
+import Layout from "./Layout";
+import CTACentered from "./components/CTA/CTACentered";
+import PageBreadcrumb from "./components/PageBreadcrumb";
 
 const router = createBrowserRouter([
 	{
@@ -46,7 +47,16 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/faq",
-		element: <NotFound />,
+		element: (
+			<Layout>
+				<PageBreadcrumb
+					pageTitle={"Assistance to Customers"}
+					pageName={"Frequently Asked Question"}
+				/>
+				<FaqSection />
+				<CTACentered link={"/contact"} />
+			</Layout>
+		),
 	},
 ]);
 

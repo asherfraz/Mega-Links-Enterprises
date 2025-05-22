@@ -37,7 +37,8 @@ const AboutPage_Section2 = () => {
 							<img
 								className="md:w-[50%] w-full md:rounded-t-lg rounded-sm"
 								src={company_overview}
-								alt="billboard image"
+								alt="company_overview image"
+								loading="lazy"
 							/>
 						</div>
 					</RevealComponent>
@@ -47,7 +48,8 @@ const AboutPage_Section2 = () => {
 							<img
 								className="md:w-[50%] w-full md:rounded-t-lg rounded-sm"
 								src={our_mission}
-								alt="billboard image"
+								alt="our_mission image"
+								loading="lazy"
 							/>
 
 							<div className="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">
@@ -93,7 +95,8 @@ const AboutPage_Section2 = () => {
 							<img
 								className="md:w-[50%] w-full md:rounded-t-lg rounded-sm"
 								src={our_vision}
-								alt="billboard image"
+								alt="our_vision image"
+								loading="lazy"
 							/>
 						</div>
 					</RevealComponent>
@@ -103,7 +106,8 @@ const AboutPage_Section2 = () => {
 							<img
 								className="md:w-[50%] w-full md:rounded-t-lg rounded-sm"
 								src={our_values}
-								alt="billboard image"
+								alt="our_values image"
+								loading="lazy"
 							/>
 
 							<div className="md:w-[50%] w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 p-0 rounded-md">

@@ -1,9 +1,7 @@
-import React from "react";
 import Layout from "../Layout";
-import RevealComponent from "../components/RevealComponent";
-import FloatingText from "../components/FloatingText";
 import CTACentered from "../components/CTA/CTACentered";
 import PageBreadcrumb from "../components/PageBreadcrumb";
+import FaqSection from "../components/FaqSection";
 
 const ProjectRequirement = () => {
 	return (
@@ -12,10 +10,8 @@ const ProjectRequirement = () => {
 				pageName={"Project Requirement"}
 				pageTitle={"Hardcode Your Needs Here !"}
 			/>
-			<RevealComponent>
-				<FloatingText />
-			</RevealComponent>
 
+			<FaqSection />
 			<CTACentered />
 		</Layout>
 	);
