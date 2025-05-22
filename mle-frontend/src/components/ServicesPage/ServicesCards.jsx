@@ -2,81 +2,6 @@ import { image } from "framer-motion/client";
 import RevealComponent from "../RevealComponent";
 
 const ServicesCards = () => {
-	// const services = [
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/1.jpg",
-	// 		title: "Power Tools",
-	// 		description: "Shaping the future of technology with creativity.",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/2.jpg",
-	// 		title: "Circuits & Micro-controllers",
-	// 		description: "Hardware",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/3.jpg",
-	// 		title: "Desktops & Laptops",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/4.jpg",
-	// 		title: "Fabrications",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/5.jpg",
-	// 		title: "Building Material",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/6.jpg",
-	// 		title: "Wooden Material",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/7.jpg",
-	// 		title: "Hardware Tools",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/8.jpg",
-	// 		title: "Sanitary Parts",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://mega-links-enterprises.netlify.app/images/portfolio/9.jpg",
-	// 		title: "Networking & Communication",
-	// 		description: "",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://images.unsplash.com/photo-1590613607026-15c463e30ca5?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-	// 		title: "CCtv & Surveillance",
-	// 		description: "Ensuring safety and security with technology.",
-	// 	},
-	// 	{
-	// 		image:
-	// 			"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-	// 		title: "Software & Website Development",
-	// 		description:
-	// 			"Custom software solutions and responsive websites for your business.",
-	// 	},
-	// 	{
-	// 		image: "",
-	// 		title: "Networking & Communication",
-	// 		description: "",
-	// 	},
-	// ];
-
 	const services = [
 		// 🛠️ Hardware Tools & Materials
 		{
@@ -166,8 +91,8 @@ const ServicesCards = () => {
 	return (
 		<RevealComponent>
 			<div className="flex flex-col items-start justify-start mb-8 px-4">
-				<h2 className="text-4xl font-bold text-left dark:text-white border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
-					Services
+				<h2 className="text-4xl font-bold capitalize text-left dark:text-white border-b-2 border-blue-600 dark:border-b-2 dark:border-yellow-600">
+					Services we provide
 				</h2>
 				<p className="text-gray-700 dark:text-gray-300 my-4 w-2/3">
 					We are a leading supplier of hardware tools, building materials, and
@@ -177,30 +102,33 @@ const ServicesCards = () => {
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{services.map((service, index) => (
-					<div
-						key={index}
-						className="w-full max-w-md mx-auto rounded-2xl shadow-2xl overflow-hidden transform transition-all"
-					>
+					<RevealComponent key={index} noPadding="true" card="true">
 						<div
-							className="relative h-96 bg-cover bg-center  group"
-							style={{
-								backgroundImage: `url('${service.image}')`,
-							}}
+							key={index}
+							className="w-full max-w-md mx-auto rounded-2xl shadow-2xl overflow-hidden transform transition-all"
 						>
-							{/* Gradient overlay */}
-							<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100  group-hover:opacity-50 md:opacity-0 transition duration-300"></div>
+							<div className="relative h-96 group overflow-hidden">
+								<img
+									src={service.image}
+									alt={service.title}
+									loading="lazy"
+									className="object-cover object-center w-full h-full"
+								/>
+								{/* Gradient overlay */}
+								<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-80 transition-opacity duration-300 ease-in-out"></div>
 
-							{/* Text appears on hover */}
-							<div className="absolute inset-0 p-6 flex flex-col justify-end opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-								<h2 className="text-3xl font-bold text-white leading-tight">
-									{service.title}
-								</h2>
-								<p className="text-lg text-white opacity-80">
-									{service.description}
-								</p>
+								{/* Text on hover */}
+								<div className="absolute inset-0 p-6 flex flex-col justify-end opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+									<h2 className="text-3xl font-bold text-white leading-tight">
+										{service.title}
+									</h2>
+									<p className="text-lg text-white opacity-80">
+										{service.description}
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
+					</RevealComponent>
 				))}
 			</div>
 		</RevealComponent>

@@ -1,6 +1,7 @@
 import React from "react";
 import RevealComponent from "../RevealComponent";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const CTALeftAligned = () => {
 	return (
@@ -44,12 +45,18 @@ const CTALeftAligned = () => {
 					transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
 					className="flex flex-col items-end justify-center w-full  h-full md:w-[50%] p-4 gap-4 "
 				>
-					<button className="inline-flex text-white bg-blue-600 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded-lg text-lg hover:bg-blue-800 transition focus:outline-none  duration-100">
+					<Link
+						to="/contact"
+						className="inline-flex text-white bg-blue-600 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded-lg text-lg hover:bg-blue-800 transition focus:outline-none  duration-100"
+					>
 						Get Started
-					</button>
-					<button className="inline-flex text-gray-800 bg-gray-300 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded-lg text-lg hover:bg-gray-600 hover:text-white transition focus:outline-none  duration-100">
+					</Link>
+					<Link
+						to="/project-requirement"
+						className="inline-flex text-gray-800 bg-gray-300 border-0 py-1 px-3 sm:py-2 sm:px-6 rounded-lg text-lg hover:bg-gray-600 hover:text-white transition focus:outline-none  duration-100"
+					>
 						Register your Requirements
-					</button>
+					</Link>
 				</motion.div>
 			</div>
 		</RevealComponent>

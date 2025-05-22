@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://megalinksenterprises.netlify.app/sitemap.xml

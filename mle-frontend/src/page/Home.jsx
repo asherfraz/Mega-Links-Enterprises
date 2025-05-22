@@ -14,17 +14,11 @@ const Home = () => {
 		<Layout>
 			<Hero />
 
-			<RevealComponent>
-				<AboutSectionHome />
-			</RevealComponent>
+			<AboutSectionHome />
 
-			<RevealComponent>
-				<CompaniesGrid />
-			</RevealComponent>
+			<CompaniesGrid />
 
-			<RevealComponent>
-				<ServicesSection />
-			</RevealComponent>
+			<ServicesSection />
 
 			<RevealComponent>
 				<FloatingText />

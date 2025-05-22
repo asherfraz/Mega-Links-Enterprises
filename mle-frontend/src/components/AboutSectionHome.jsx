@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import company_overview from "../assets/About/company-overview.jpg";
 import our_mission from "../assets/About/our-mission.jpg";
 import our_vision from "../assets/About/our_vision.jpg";
+import RevealComponent from "./RevealComponent";
 
 const AboutSectionHome = () => {
 	const images = ["/mle_logo2.png", company_overview, our_mission, our_vision];
 	const [imgIndex, setImgIndex] = useState(0);
 
 	return (
-		<>
+		<RevealComponent>
 			<h2 className="text-4xl font-bold text-center dark:text-white">
 				About Us
 			</h2>
@@ -32,7 +33,7 @@ const AboutSectionHome = () => {
 					<AboutAccordion setImgIndex={setImgIndex} />
 				</div>
 			</div>
-		</>
+		</RevealComponent>
 	);
 };
 

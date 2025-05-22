@@ -217,10 +217,9 @@ const Hero = () => {
 								</h1>
 
 								<p className="mb-8 leading-relaxed text-gray-500 dark:text-gray-400 px-3">
-									Meggings kinfolk echo park stumptown DIY, kale chips beard
-									jianbing tousled. Chambray dreamcatcher trust fund, kitsch
-									vice godard disrupt ramps hexagon mustache umami snackwave
-									tilde chillwave ugh.
+									Delivering reliable contracting and supply solutions with
+									efficiency, quality, and trust — for every project, every
+									time.
 								</p>
 								<motion.div
 									variants={variants}

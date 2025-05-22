@@ -21,7 +21,10 @@ const RevealComponent = ({
 
 	return (
 		// <section ref={ref} className={`relative w-${width} overflow-${overflow} bg-gray-900 rounded-lg shadow-lg p-4 m-4`}>
-		<section ref={ref} className={`relative w-${width}   rounded-lg `}>
+		<section
+			ref={ref}
+			className={`relative w-${width}   rounded-lg overflow-hidden`}
+		>
 			<motion.div
 				variants={{
 					hidden: { opacity: 0, y: 75, x: 0 },

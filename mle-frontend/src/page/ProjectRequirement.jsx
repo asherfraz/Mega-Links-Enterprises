@@ -2,6 +2,7 @@ import Layout from "../Layout";
 import CTACentered from "../components/CTA/CTACentered";
 import PageBreadcrumb from "../components/PageBreadcrumb";
 import FaqSection from "../components/FaqSection";
+import ProjectRequirementForm from "../components/PRPage/ProjectRequirementForm";
 
 const ProjectRequirement = () => {
 	return (
@@ -10,6 +11,8 @@ const ProjectRequirement = () => {
 				pageName={"Project Requirement"}
 				pageTitle={"Hardcode Your Needs Here !"}
 			/>
+
+			<ProjectRequirementForm />
 
 			<FaqSection />
 			<CTACentered />
