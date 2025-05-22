@@ -15,7 +15,7 @@ const ProjectRequirement = () => {
 			<ProjectRequirementForm />
 
 			<FaqSection />
-			<CTACentered />
+			{/* <CTACentered /> */}
 		</Layout>
 	);
 };
