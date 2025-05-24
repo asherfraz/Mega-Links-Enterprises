@@ -9,6 +9,9 @@ import FaqSection from "./components/FaqSection";
 import Layout from "./Layout";
 import CTACentered from "./components/CTA/CTACentered";
 import PageBreadcrumb from "./components/PageBreadcrumb";
+import TermsConditions from "./page/TermsConditions";
+import PrivacyPolicy from "./page/PrivacyPolicy";
+import FaqPage from "./page/FaqPage";
 
 const router = createBrowserRouter([
 	{
@@ -39,24 +42,15 @@ const router = createBrowserRouter([
 	// Other Company Legal links
 	{
 		path: "/terms-and-conditions",
-		element: <NotFound />,
+		element: <TermsConditions />,
 	},
 	{
 		path: "/privacy-policy",
-		element: <NotFound />,
+		element: <PrivacyPolicy />,
 	},
 	{
 		path: "/faq",
-		element: (
-			<Layout>
-				<PageBreadcrumb
-					pageTitle={"Assistance to Customers"}
-					pageName={"Frequently Asked Question"}
-				/>
-				<FaqSection />
-				<CTACentered link={"/contact"} />
-			</Layout>
-		),
+		element: <FaqPage />,
 	},
 ]);
 

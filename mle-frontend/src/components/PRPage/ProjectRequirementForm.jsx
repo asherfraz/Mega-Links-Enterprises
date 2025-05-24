@@ -9,23 +9,26 @@ const ProjectRequirementForm = () => {
 	} = useForm();
 
 	const onSubmit = (data) => {
-		const waText = `\t\t*Mega Links Enterprises*\n--------------------------------------------------
-Hello, I am *${data.name}*.\nMy email is *${data.email}* ${
-			data.phone !== "" ? `and my phone number is *${data.phone}*` : "."
-		}\n*My project requirements are:*\n${
-			data.requirements
-		}\n\n--------------------------------------------------
-\tsent from *megalinksenterprises.netlify.app*`;
-		window.open(
-			"https://wa.me/923469592589?text=" + encodeURIComponent(waText),
-			"_blank"
-		);
-		// Reset the form after successful submission
-		if (isSubmitSuccessful) {
-			alert("Requirements submitted successfully!");
-			// Reset the form fields
-			document.getElementByTag("form").reset();
-		}
+		// under development
+		alert("Under development, please contact us via email or WhatsApp.");
+
+		// 		const waText = `\t\t*Mega Links Enterprises*\n--------------------------------------------------
+		// Hello, I am *${data.name}*.\nMy email is *${data.email}* ${
+		// 			data.phone !== "" ? `and my phone number is *${data.phone}*` : "."
+		// 		}\n*My project requirements are:*\n${
+		// 			data.requirements
+		// 		}\n\n--------------------------------------------------
+		// \tsent from *megalinksenterprises.netlify.app*`;
+		// 		window.open(
+		// 			"https://wa.me/923469592589?text=" + encodeURIComponent(waText),
+		// 			"_blank"
+		// 		);
+		// 		// Reset the form after successful submission
+		// 		if (isSubmitSuccessful) {
+		// 			alert("Requirements submitted successfully!");
+		// 			// Reset the form fields
+		// 			document.getElementByTag("form").reset();
+		// 		}
 	};
 
 	return (
@@ -46,7 +49,7 @@ Hello, I am *${data.name}*.\nMy email is *${data.email}* ${
 					</ul>
 				</div>
 			</div>
-			<form onSubmit={handleSubmit()} className="space-y-6">
+			<form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{/* Name */}
 					<div>
@@ -175,8 +178,11 @@ Hello, I am *${data.name}*.\nMy email is *${data.email}* ${
 							})}
 							className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-500 dark:text-white dark:bg-gray-900"
 						>
-							<option value="" className="dark:text-white dark:bg-gray-800">
+							{/* <option value="" className="dark:text-white dark:bg-gray-800">
 								Select Project Type
+							</option> */}
+							<option value="general-order-supply">
+								General Order Supplies
 							</option>
 							<option value="civil-work">Civil Works</option>
 							<option value="electrical-supply">
@@ -184,10 +190,9 @@ Hello, I am *${data.name}*.\nMy email is *${data.email}* ${
 							</option>
 							<option value="hardware-tools">Hardware & Power Tools</option>
 							<option value="material-supply">Material Supply</option>
-							<option value="mechanical">Mechanical Works</option>
+							<option value="mechanical-work">Mechanical Works</option>
 							<option value="cctv-surveillance">CCTV / Security Systems</option>
 							<option value="technical-equipment">Technical Equipment</option>
-							<option value="general">General Order Supplies</option>
 						</select>
 						{errors.projectType && (
 							<p className="text-red-500 pt-1">{errors.projectType.message}</p>
@@ -298,7 +303,7 @@ Hello, I am *${data.name}*.\nMy email is *${data.email}* ${
 								message: "Requirements must be less than 1000 characters",
 							},
 							pattern: {
-								value: /^[a-zA-Z0-9\s.,;:'"=+-*/()\-\/]+$/,
+								value: /^[a-zA-Z0-9\s.,;*+-/()\-\/]+$/,
 								message: "Only letters, numbers, and basic punctuation allowed",
 							},
 						})}

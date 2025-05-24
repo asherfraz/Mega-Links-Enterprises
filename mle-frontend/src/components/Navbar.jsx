@@ -241,6 +241,18 @@ const Navbar = () => {
 						>
 							Services
 						</NavLink>
+						<NavLink
+							to="/project-requirement"
+							className={({ isActive }) =>
+								` dark:text-gray-400 dark:hover:text-white hover:text-black  ${
+									isActive
+										? "dark:text-white font-bold"
+										: "dark:text-amber-300 "
+								} `
+							}
+						>
+							Project Requirement
+						</NavLink>
 						<hr className="w-full h-[2px] my-2 bg-white/60" />
 						<NavLink
 							to="/contact"

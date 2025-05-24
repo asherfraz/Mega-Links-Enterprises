@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const Footer = () => {
+	const currentYear = new Date().getFullYear();
 	return (
 		<footer className="text-gray-600 bg-white   dark:bg-gray-900  body-font shadow-[inset_0_1px_0_0_#e5e7eb80] dark:shadow-[inset_0_1px_0_0_#96969660] rounded-tl-2xl rounded-tr-2xl">
 			<div className="container px-5 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
@@ -142,18 +143,19 @@ const Footer = () => {
 			<div className="bg-gray-100 dark:bg-gray-800">
 				<div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
 					<p className="text-gray-500 text-sm text-center sm:text-left">
-						© 2010 - Present &nbsp; Mega Links Enterprises — Developed by
-						<Link
-							to="https://asherfraz.com/"
+						© {currentYear}&nbsp; Mega Links Enterprises — Developed by
+						<a
+							href="https://asherfraz.com/"
 							rel="noopener noreferrer"
 							className="text-gray-600 ml-1"
 							target="_blank"
 						>
 							@asherfraz
-						</Link>
+						</a>
 					</p>
 					<span className="inline-flex sm:ml-auto sm:mt-0 mt-3 justify-center sm:justify-start">
-						<Link
+						{/* Facebook */}
+						{/* <Link
 							to="https://facebook.com/"
 							target="_blank"
 							className="text-gray-500"
@@ -168,8 +170,9 @@ const Footer = () => {
 							>
 								<path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
 							</svg>
-						</Link>
-						<Link
+						</Link> */}
+						{/* Twitter */}
+						{/* <Link
 							to="https://twitter.com/"
 							target="_blank"
 							className="ml-3 text-gray-500"
@@ -184,8 +187,9 @@ const Footer = () => {
 							>
 								<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
 							</svg>
-						</Link>
-						<Link
+						</Link> */}
+						{/* Instagram */}
+						{/* <Link
 							to="https://instagram.com/"
 							target="_blank"
 							className="ml-3 text-gray-500"
@@ -202,9 +206,9 @@ const Footer = () => {
 								<rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
 								<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
 							</svg>
-						</Link>
-						<Link
-							to="https://linkedin.com/"
+						</Link> */}
+						<a
+							href="https://pk.linkedin.com/in/sarfraz-anjum-823293b5"
 							target="_blank"
 							className="ml-3 text-gray-500"
 						>
@@ -223,7 +227,7 @@ const Footer = () => {
 								/>
 								<circle cx="4" cy="4" r="2" stroke="none" />
 							</svg>
-						</Link>
+						</a>
 					</span>
 				</div>
 			</div>
